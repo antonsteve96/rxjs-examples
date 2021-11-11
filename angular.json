@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "504c10af-2db3-4999-b855-86f118378454"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rxjs": {
+    "rxjs-basics": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rxjs",
+            "outputPath": "dist/rxjs-basics",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "rxjs:build:production"
+              "browserTarget": "rxjs-basics:build:production"
             },
             "development": {
-              "browserTarget": "rxjs:build:development"
+              "browserTarget": "rxjs-basics:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rxjs:build"
+            "browserTarget": "rxjs-basics:build"
           }
         },
         "test": {
@@ -102,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "rxjs"
+  "defaultProject": "rxjs-basics"
 }
